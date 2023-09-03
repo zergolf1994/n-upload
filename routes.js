@@ -10,6 +10,7 @@ const { serverCreate } = require("./controllers/server");
 router.post("/upload", AuthJWT, uploadSingle);
 router.post("/chunks", AuthJWT, uploadChunks);
 router.get("/delete", deleteFile);
+router.get("/upload/:file_name/delete-video", deleteFile);
 
 router.get("/server/create", serverCreate);
 
